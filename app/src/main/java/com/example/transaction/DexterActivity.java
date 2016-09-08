@@ -73,8 +73,14 @@ public class DexterActivity extends BaseActivity implements RatFragment.OnFragme
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.disallow_state_loss:
+                allowStateLoss = false;
+                changeOnStop = true;
+                startActivity(new Intent(DexterActivity.this, SecondActivity.class));
                 break;
             case R.id.allow_state_loss:
+                allowStateLoss = true;
+                changeOnStop = true;
+                startActivity(new Intent(DexterActivity.this, SecondActivity.class));
                 break;
             case R.id.no_state_loss:
                 break;
