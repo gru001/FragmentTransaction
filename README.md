@@ -12,7 +12,7 @@
 
   If you turn on "Don't Keep Activities" and press the "no state loss" button, you will see that the FragmentManager properly retains its state.
 
-## `commit()`, `commitNow()`, and `executePendingTransactions()`
+## commit(), commitNow(), and executePendingTransactions()
 
   The other variants of `commit()` specify when the transaction occurs. The documentation for `commit()` offers this explanation for timing:
 
