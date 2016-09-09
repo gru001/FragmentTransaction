@@ -20,9 +20,10 @@ public class DextersLabActivity extends BaseActivity implements View.OnClickList
     public void onClick(View view) {
         int i = view.getId();
         if (i == R.id.btnOtherCommitVariant) {
-            startActivity(DexterActivity.getStartIntent(this));
+            startActivity(DexterActivity.getStartIntent(this,false));
 
         } else if (i == R.id.btnStateLoss) {
+            startActivity(DexterActivity.getStartIntent(this,true));
         }
     }
 }
