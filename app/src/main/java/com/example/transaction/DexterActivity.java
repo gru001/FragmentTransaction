@@ -37,7 +37,7 @@ public class DexterActivity extends BaseActivity implements WhiteRatFragment.OnF
                 mBuilder.append(getSupportFragmentManager().getBackStackEntryCount());
                 mBuilder.append("\n");
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, BlackRatFragment.newInstance(null, null)).commitNow();
-                mBuilder.append(" After commit now with black rat: ");
+                mBuilder.append(" After commit now: ");
                 mBuilder.append(getSupportFragmentManager().getBackStackEntryCount());
                 mBuilder.append("\n");
                 Log.i(TAG, "handleMessage    : " + getSupportFragmentManager().getBackStackEntryCount());
