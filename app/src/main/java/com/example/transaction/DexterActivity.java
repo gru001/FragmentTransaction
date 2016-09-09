@@ -36,8 +36,8 @@ public class DexterActivity extends BaseActivity implements WhiteRatFragment.OnF
                 mBuilder.append(" After handler post delayed: ");
                 mBuilder.append(getSupportFragmentManager().getBackStackEntryCount());
                 mBuilder.append("\n");
-                getSupportFragmentManager().beginTransaction().replace(R.id.container, WhiteRatFragment.newInstance(null, null)).commitNow();
-                mBuilder.append(" After commit now: ");
+                getSupportFragmentManager().beginTransaction().replace(R.id.container, BlackRatFragment.newInstance(null, null)).commitNow();
+                mBuilder.append(" After commit now with black rat: ");
                 mBuilder.append(getSupportFragmentManager().getBackStackEntryCount());
                 mBuilder.append("\n");
                 Log.i(TAG, "handleMessage    : " + getSupportFragmentManager().getBackStackEntryCount());
@@ -178,6 +178,15 @@ public class DexterActivity extends BaseActivity implements WhiteRatFragment.OnF
                     }
                 }, 3 * 1000);
                 break;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(isSateLoss) {
+            super.onBackPressed();
+        }else{
+            finish();
         }
     }
 }
