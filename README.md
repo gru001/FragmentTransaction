@@ -2,7 +2,7 @@
 Demonstrate flavors of commit()
 
 
-This app presents buttons, each of which will attempt to replace a big blue rectangle with a big red rectangle. The three different options are:
+This app presents buttons, each of which will attempt to replace a big blue rectangle(WhiteRatFragment) with a big red rectangle(BlackRatFragment). The three different options are:
 
  * Don't allow state loss. This will crash the app because it will attempt to make the change after `onSaveInstanceState()`.
  * Allow state loss. This will make the change, but you may lose state (more on that in a second).
