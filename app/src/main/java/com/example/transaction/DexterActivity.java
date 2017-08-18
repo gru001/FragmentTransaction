@@ -136,6 +136,12 @@ public class DexterActivity extends BaseActivity implements WhiteRatFragment.OnF
     }
 
     @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState: ");
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.disallow_state_loss:
